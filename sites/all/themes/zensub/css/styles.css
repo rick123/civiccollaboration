@@ -1,0 +1,110 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+ /* HTML element (SMACSS base) rules */
+ @import "normalize.css";
+
+ /* Layout rules */
+ @import "layouts/responsive.css";
+
+ /* Component (SMACSS module) rules */
+ @import "components/misc.css";
+ /* Optionally, add your own components here. */
+ @import "print.css";
+
+ /* SMACSS theme rules */
+ /* @import "theme-A.css"; */
+ /* @import "theme-B.css"; */
+
+ /*****************************************
+ **************** region headernav ********
+ *****************************************/
+ #headernav{
+ 	background-color: #545454;
+ 	position: fixed;
+ 	top: 0;
+ 	width: 100%;
+ 	padding-top:1px;
+ 	padding-bottom:1px;
+ 	z-index: 10;
+ }
+ #block-menu-menu-header-nav-menu{
+ 	margin-bottom: 0;
+ }
+ ul.menu{
+ 	font-family: helvetica,sans-serif;
+ 	margin: 0;
+ 	width: 100%;
+ 	list-style-type: none;
+ 	float: right;
+ 	padding-right:4em;
+ 	border-top: 1px solid #b8b8b8;
+ 	border-bottom: 1px solid #b8b8b8;
+ }
+ ul.menu li{
+ 	border-left: 1px solid #333;
+ 	border-right: 1px solid #777;
+ 	margin: 0;
+ 	list-style-type: none !important;
+ 	list-style-image: none !important;
+ 	padding: .4em 1em .4em;
+ 	float: right;
+ 	background-color: #545454;
+ 	position: relative;
+ 	transition:background-color .6s;
+ 	-webkit-transition:background-color .6s;
+ 	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+ 	transition:box-shadow 1s;
+ 	-webkit-transition:box-shadow 1s;
+ }
+ .menu li a{
+ 	color: #fff;
+ 	text-decoration: none;
+ 	padding:0 .3em;
+ 	font-family: helvetica,sans-serif;
+ 	letter-spacing: 1px;
+	font-weight: lighter;
+ }
+ .menu a.is-active-trail{
+ 	color:#fff;
+ }
+ .menu li.last:before {
+ 	bottom: 1px;
+ 	top: 1px;
+ 	content: " ";
+ 	left: -2px;
+ 	position: absolute;
+ 	border-left: 1px solid #777;
+ }
+ .menu li.first:after {
+ 	content: " ";
+ 	right: -2px;
+ 	bottom: 1px;
+ 	top: 1px;
+ 	position: absolute;
+ 	border-left: 1px solid #333;
+ }
+ .menu li:hover{
+ 	-webkit-box-shadow: 0 0 30px 30px #369 inset;
+	-moz-box-shadow: 0 0 30px 30px #369 inset;
+	box-shadow: 0 0 30px 30px #69c inset;
+ }
+ .menu li.active-trail{
+ 	background-color:#000;
+ }
+ .region-header-nav h2{
+ 	display:none;
+ }
+ /*****************************************
+ *********logo and rest of header *********
+ ******************************************/
+ .header__logo-image {
+    margin-top: 4em;
+}

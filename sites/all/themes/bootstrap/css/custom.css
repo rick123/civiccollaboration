@@ -1,0 +1,7 @@
+/* custom CSS for Bootstrap */
+body{
+	background: #eeefee;
+}
+.nav>li>a {
+	color:#fff;
+}
